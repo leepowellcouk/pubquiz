@@ -31,7 +31,7 @@ function getScores() {
   $data = array();
 
   foreach ($db->scores() as $score) {
-    $data[] = $score;
+    $data[] = rowToArray($score);
   };
 
   echo json_encode($data, JSON_NUMERIC_CHECK);
@@ -48,7 +48,7 @@ function getQuestions() {
     $tmp = rowToArray($question);
 
     foreach ($question->categories_questions() as $categories_questions) {
-      $tmp['category'] = $categories_questions->categories;
+      $tmp['category'] = rowToArray($categories_questions->categories);
     }
 
     $data[] = $tmp;
@@ -69,7 +69,7 @@ function getQuestion($id) {
       $tmp = rowToArray($row);
 
       foreach ($row->categories_questions() as $categories_questions) {
-        $tmp['category'] = $categories_questions->categories;
+        $tmp['category'] = rowToArray($categories_questions->categories);
       }
 
       $data = $tmp;
@@ -97,7 +97,7 @@ function getCategories() {
     $tmp['questions'] = array();
 
     foreach ($category->categories_questions() as $categories_questions) {
-      $tmp['questions'][] = $categories_questions->questions;
+      $tmp['questions'][] = rowToArray($categories_questions->questions);
     }
 
     $data[] = $tmp;
@@ -119,7 +119,7 @@ function getCategory($id) {
       $tmp['questions'] = array();
 
       foreach ($row->categories_questions() as $categories_questions) {
-        $tmp['questions'][] = $categories_questions->questions;
+        $tmp['questions'][] = rowToArray($categories_questions->questions);
       }
 
       $data = $tmp;
