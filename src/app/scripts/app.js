@@ -64,7 +64,7 @@ angular.module('quizApp', ['ui.bootstrap'])
   // Runtime
   // ---------------------------------------------------------
   .run(function ($location, quizService) {
-    // if (!quizService.isFromStart()) {
-    //   $location.path('/');
-    // }
+    if (!quizService.isFromStart()) {
+      $location.path('/');
+    }
   })
