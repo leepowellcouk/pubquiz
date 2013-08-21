@@ -148,7 +148,7 @@ function addScore() {
     $data = $db->scores()->where('id', $id)->fetch();
   }
   else {
-    $data = {'message' => 'Score invalid format or not set.'};
+    $data = array('message' => 'Score invalid format or not set.');
   }
 
   echo json_encode($data, JSON_NUMERIC_CHECK);
