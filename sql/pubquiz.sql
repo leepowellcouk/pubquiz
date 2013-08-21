@@ -125,8 +125,8 @@ VALUES
 	(14,'By 1830 all of Spanish South America had gained its independence?',1,'2013-08-19 00:00:00','2013-08-19 00:00:00'),
 	(15,'By raising wages and lowering prices, the devastation of the Black Death ultimately helped expand European trade?',1,'2013-08-19 00:00:00','2013-08-19 00:00:00'),
 	(16,'Spandau Ballet got their name from a piece of graffiti on a Berlin toilet wall?',1,'2013-08-19 00:00:00','2013-08-19 00:00:00'),
-	(17,'Michael Jackson’s 1988 hit Dirty Diana is about our own Princess Di?',0,'2013-08-19 00:00:00','2013-08-19 00:00:00'),
-	(18,'Madonna has Marilyn Monroe’s face tattooed on her behind?',1,'2013-08-19 00:00:00','2013-08-19 00:00:00'),
+	(17,'Michael Jackson\'s 1988 hit Dirty Diana is about our own Princess Di?',0,'2013-08-19 00:00:00','2013-08-19 00:00:00'),
+	(18,'Madonna has Marilyn Monroe\'s face tattooed on her behind?',1,'2013-08-19 00:00:00','2013-08-19 00:00:00'),
 	(19,'George Michael owns the piano on which John Lennon wrote Imagine?',1,'2013-08-19 00:00:00','2013-08-19 00:00:00'),
 	(20,'Paul McCartney died in the mid-60s and was replaced by a lookalike?',0,'2013-08-19 00:00:00','2013-08-19 00:00:00');
 
