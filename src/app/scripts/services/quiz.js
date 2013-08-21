@@ -204,6 +204,7 @@ angular.module('quizApp')
 
     this.reset = function () {
       buildQuiz(angular.copy(quizData));
+      fromStart = false;
     };
 
     this.getScore = function () {
