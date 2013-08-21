@@ -1,0 +1,15 @@
+<div class="category">
+  <h2>{{category.name}}</h2>
+
+  <p class="question lead">{{questionNo}}. {{question.question}}</p>
+
+  <div class="question-options">
+    <label class="radio inline"><input type="radio" data-ng-model="answer" value="1" data-ng-change="setAnswer(answer)" /> True</label>
+    <label class="radio inline"><input type="radio" data-ng-model="answer" value="0" data-ng-change="setAnswer(answer)" /> False</label>
+  </div>
+
+  <div class="question-controls">
+    <button class="btn pull-left" data-ng-click="previousQuestion()" data-ng-show="hasPrevious()"><i class="icon-chevron-left"></i> Previous</button>
+    <button class="btn btn-primary pull-right" data-ng-click="nextQuestion()" data-ng-disabled="!isAnswered()" data-ng-class="{'disabled': !isAnswered()}">Next <i class="icon-chevron-right icon-white"></i></button>
+  </div>
+</div>

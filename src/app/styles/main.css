@@ -1,0 +1,195 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background: #006600;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: #006600;
+    font-weight: 200;
+}
+
+h1 {
+    font-size: 1.429em; /* 20/14 */
+}
+h2 {
+    font-size: 1.286em; /* 18/14 */
+}
+h3, h4, h5, h6 {
+    font-size: 1.143em; /* 16/14 */
+}
+
+a {
+    color: #006600;
+}
+
+.container {
+    width: 740px;
+}
+
+.content {
+    background: #fff;
+    min-height: 350px;
+}
+.content > .container {
+    padding: 20px 0;
+}
+
+.banner {
+    height: 150px;
+    background: url('/app/images/logo.png') 50% 50% no-repeat;
+}
+.banner .container {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    height: 150px;
+}
+.banner .container a {
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    position: absolute;
+    width: 170px;
+    height: 150px;
+    top: 0;
+    left: 284px;
+}
+
+.footer {
+    background: #006600;
+    padding: 20px;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+.btn-main {
+    margin: 1.5em 0;
+}
+
+.btn-primary {
+    background-color: #006600;
+    *background-color: #006600;
+    background-image: -moz-linear-gradient(top, #006600, #009900);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#006600), to(#009900));
+    background-image: -webkit-linear-gradient(top, #006600, #009900);
+    background-image: -o-linear-gradient(top, #006600, #009900);
+    background-image: linear-gradient(to bottom, #006600, #009900);
+    background-repeat: repeat-x;
+    border-color: #0044cc #0044cc #002a80;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00600cc', endColorstr='#009900cc', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  color: #ffffff;
+  background-color: #009900;
+  *background-color: #009900;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #003399 \9;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.scoreboard th {
+    cursor: pointer;
+}
+.scoreboard h1 {
+    line-height: 1;
+}
+
+.modal.scoreboard {
+    padding: 20px;
+    max-height: 70%;
+    overflow: scroll;
+}
+.modal.scoreboard h1 {
+    margin-top: 0;
+}
+.modal.scoreboard table {
+    margin-bottom: 0;
+}
+
+.feature-heading {
+    font-size: 32px;
+}
+
+.score.summary {
+    font-size: 21px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.categories-list {
+    overflow: auto;
+    margin-top: 20px;
+}
+.categories-list li {
+    float: left;
+    width: 180px;
+    margin-left: 6px;
+    text-align: center;
+}
+.categories-list li:first-child {
+    margin-left: 0;
+}
+.categories-list .name {
+    display: block;
+    margin-bottom: 15px;
+    opacity: 1;
+    padding-top: 210px;
+    font-size: 21px;
+}
+.categories-list .complete .name {
+    opacity: .5;
+}
+.music .name {
+    background: url('/app/images/music.jpg') no-repeat;
+}
+.sport .name {
+    background: url('/app/images/sport.jpg') no-repeat;
+}
+.geography .name {
+    background: url('/app/images/geography.jpg') no-repeat;
+}
+.history .name {
+    background: url('/app/images/history.jpg') no-repeat;
+}
+
+.question-controls {
+    border-top: 1px solid #ccc;
+    margin-top: 1.5em;
+    padding-top: 1.5em;
+}
+.question-options label {
+    font-size: 18px;
+    font-weight: 200;
+}

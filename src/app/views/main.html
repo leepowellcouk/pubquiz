@@ -1,0 +1,34 @@
+<div class="text-center">
+  <h2 class="feature-heading">Take the Pub Quiz.</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis placerat justo, ac iaculis erat dictum in.<br/> Pellentesque tincidunt ornare libero vel fringilla. Nulla faucibus convallis est non aliquam.</p>
+  <a href="#categories" class="btn btn-primary btn-large btn-block btn-main" data-ng-click="startQuiz()">Start Quiz</a>
+  <a href="#scoreboard" data-ng-click="viewScoreboard($event)">View Scoreboard</a>
+</div>
+
+
+<section id="scoreboard" class="scoreboard" data-modal="modal" data-options="modalOpts">
+  <h1>Scoreboard</h1>
+  <div data-ng-switch="hasScores()">
+    <div data-ng-switch-when="true">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th data-ng-click="predicate='id'"># <i class="icon-chevron-down"></i></th>
+            <th data-ng-click="predicate='score'">Score <i class="icon-chevron-down"></i></th>
+            <th data-ng-click="predicate='date_created'">Date <i class="icon-chevron-down"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-ng-repeat="score in scores | orderBy:predicate:reverse">
+            <td>{{score.id}}</td>
+            <td>{{score.score}}</td>
+            <td>{{score.date_created | date:'EEEE, dd MMMM yyyy @ HH:mm'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div data-ng-switch-when="false">
+      No scores have been saved.
+    </div>
+  </div>
+</section>

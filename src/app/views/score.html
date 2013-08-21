@@ -1,0 +1,15 @@
+<div class="score text-center">
+  <h2 class="feature-heading">Congratulations</h2>
+
+  <p class="score summary">Your score is <b>{{score}}</b>/<b>{{totalQuestions}}</b></p>
+
+  <div data-ng-hide="alert.hide">
+    <div data-alert data-type="alert.type" data-close="closeAlert($index)">{{alert.message}}</div>
+  </div>
+
+  <button data-ng-click="saveScore()" class="btn btn-primary btn-block btn-large btn-main" data-ng-hide="submitted">Save Your Score</button>
+
+  <a href="#/">Try Again?</a>
+
+  <a href="#/?scoreboard=true">View Scoreboard</a>
+</div>

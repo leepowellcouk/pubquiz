@@ -1,0 +1,13 @@
+<div class="categories">
+  <h2 class="feature-heading text-center">Categories</h2>
+
+  <ul class="categories-list unstyled">
+    <li data-ng-repeat="category in categories" class="{{category.slug}}" data-ng-class="{complete: category.isComplete()}">
+      <div class="name">{{category.name}}</div>
+      <a href="#category/{{category.slug}}" data-ng-hide="category.isComplete()" class="btn btn-primary">Start</a>
+      <span class="complete" data-ng-show="category.isComplete()">Complete</span>
+    </li>
+  </ul>
+
+  <a href='#score' class="btn btn-primary btn-block btn-large btn-main" data-ng-show="quizComplete()">See Your Score</a>
+</div>
