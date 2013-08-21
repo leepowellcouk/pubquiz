@@ -12,15 +12,15 @@ angular.module('quizApp')
 
     Answer.prototype.set = function (val) {
       this.value = val;
-    }
+    };
 
     Answer.prototype.get = function () {
       return this.value;
-    }
+    };
 
     function create(questionId) {
       return new Answer(questionId);
-    }
+    };
 
     return {
       create: create
@@ -36,11 +36,11 @@ angular.module('quizApp')
 
     Question.prototype.isCorrect = function (answer) {
       return Number(this.answer) === answer;
-    }
+    };
 
     function create(obj) {
       return new Question(obj);
-    }
+    };
 
     return {
       create: create
@@ -75,7 +75,7 @@ angular.module('quizApp')
 
     Category.prototype.getQuestions = function () {
       return this.questions;
-    }
+    };
 
     Category.prototype.getQuestion = function (id) {
       var question = null;
@@ -97,7 +97,7 @@ angular.module('quizApp')
     Category.prototype.setAnswer = function (val, questionId) {
       var answer = this.getAnswer(questionId);
       answer.set(Number(val));
-    }
+    };
 
     Category.prototype.getAnswer = function (questionId) {
       var answer = null;
@@ -132,11 +132,11 @@ angular.module('quizApp')
 
     Category.prototype.getTotalQuestions = function () {
       return this.questions.length;
-    }
+    };
 
     function create(obj, questions, answers) {
       return new Category(obj, questions, answers);
-    }
+    };
 
     return {
       create: create
@@ -204,7 +204,7 @@ angular.module('quizApp')
 
     this.reset = function () {
       buildQuiz(angular.copy(quizData));
-    }
+    };
 
     this.getScore = function () {
       var score = 0;
@@ -212,7 +212,7 @@ angular.module('quizApp')
         score += category.getScore();
       });
       return score;
-    }
+    };
 
     this.getTotalQuestions = function () {
       var total = 0;
@@ -220,7 +220,7 @@ angular.module('quizApp')
         total += category.getTotalQuestions();
       });
       return total;
-    }
+    };
 
     this.isComplete = function () {
       var complete = true;
@@ -230,11 +230,11 @@ angular.module('quizApp')
         }
       });
       return complete;
-    }
+    };
 
     this.getCategories = function () {
       return categories;
-    }
+    };
 
     this.getCategoryBySlug = function (slug) {
       var catsLength = categories.length;
@@ -251,5 +251,5 @@ angular.module('quizApp')
       }
 
       return category;
-    }
+    };
   });

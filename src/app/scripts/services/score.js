@@ -8,24 +8,20 @@ angular.module('quizApp')
     var fetchPromise = null;
 
     this.fetch = function (refetch) {
-      // var deferred;
+      var deferred     = $q.defer();
 
-      // if (fetchPromise === null || refetch === true) {
-        var deferred     = $q.defer();
-        // fetchPromise = deferred.promise;
+      $http
+        .get(uris.scores)
+        .success(function (data, status, headers, config) {
+          deferred.resolve(data);
+        })
+        .error(function (data, status, headers, config) {
+          deferred.reject(status);
+        });
 
-        $http
-          .get(uris.scores)
-          .success(function (data, status, headers, config) {
-            deferred.resolve(data);
-          })
-          .error(function (data, status, headers, config) {
-            deferred.reject(status);
-          });
-      // }
 
       return deferred.promise;
-    }
+    };
 
     this.save = function (score) {
       var deferred = $q.defer();
@@ -44,5 +40,5 @@ angular.module('quizApp')
         });
 
       return deferred.promise;
-    }
+    };
   });

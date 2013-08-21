@@ -27,18 +27,18 @@ angular.module('quizApp')
             alert.type    = 'error';
             alert.hide    = false;
           });
-    }
+    };
 
     $scope.tryAgain = function () {
       quizService.reset();
       $location.path('/categories');
-    }
+    };
 
     $scope.closeAlert = function () {
       alert.message = null;
       alert.type    = null;
       alert.hide    = true;
-    }
+    };
 
     $scope.$watch('alert', function (val) {
       $scope.alert = val;

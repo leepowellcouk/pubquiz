@@ -6,5 +6,5 @@ angular.module('quizApp')
 
     $scope.quizComplete = function () {
       return quizService.isComplete();
-    }
+    };
   });

@@ -20,7 +20,7 @@ angular.module('quizApp')
 
     $scope.setAnswer = function (val) {
       category.setAnswer(val, questions[current].id);
-    }
+    };
 
     $scope.nextQuestion = function () {
       current++;
@@ -32,20 +32,20 @@ angular.module('quizApp')
         $scope.answer   = getAnswer();
         $scope.questionNo = getQuestionNo();
       }
-    }
+    };
 
     $scope.previousQuestion = function () {
       current--;
       $scope.question   = questions[current];
       $scope.answer     = getAnswer();
       $scope.questionNo = getQuestionNo();
-    }
+    };
 
     $scope.hasPrevious = function () {
       return current > 0;
-    }
+    };
 
     $scope.isAnswered = function () {
       return $scope.answer !== null;
-    }
+    };
   });
